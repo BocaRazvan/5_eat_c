@@ -4,7 +4,28 @@
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/mini2.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
+}
+
+.hero-bakery h1 {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow for the big title */
+}
+
+/* Targets the Description Paragraph */
+.hero-bakery p.lead {
+  font-weight: 500 !important; /* Overrides Bootstrap's default lead weight */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 700px; /* Optional: keeps the text from stretching too wide on desktop */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaBtn {
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.ctaBtn:hover {
+  transform: translateY(-2px); /* Subtle lift effect */
 }
 
 /* _products.scss */
@@ -76,16 +97,12 @@
 
 /* _offcanvas.scss */
 .offcanvas .nav-pills {
-  background-color: #f8f9fa;
   padding: 5px;
   border-radius: 50px;
 }
 .offcanvas .nav-pills .nav-link {
   border-radius: 50px;
   transition: all 0.3s ease;
-}
-.offcanvas .nav-pills .nav-link.active {
-  color: white !important;
 }
 .offcanvas .offcanvas-body .tab-pane {
   animation: fadeIn 0.4s ease-in-out;
@@ -110,16 +127,16 @@
 }
 
 #mainNavbar {
-  background-color: #209a89 !important;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid #df0a0a !important;
+  /* Change the solid color to a semi-transparent one (RGBA) */
+  backdrop-filter: blur(1px);
+  /* Adding a thin, light top border makes the 'glass' look like it has an edge */
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
-#mainNavbar .nav-link {
-  color: #f8f9fa !important;
+
+.nav-link {
   transition: color 0.3s ease;
-}
-#mainNavbar .nav-link:hover {
-  color: #ff69b4 !important;
 }
 
 /* _events.scss */
@@ -151,9 +168,6 @@
 #contact .card {
   border-radius: 1.5rem;
   transition: transform 0.3s ease;
-}
-#contact .btn-outline-primary:hover {
-  color: white;
 }
 #contact iframe {
   filter: grayscale(0.2) contrast(1.1);
@@ -206,15 +220,20 @@ footer .text-primary {
   color: blue !important;
 }
 
-body {
-  padding-top: 70px;
-}
-@media (min-width: 992px) {
-  body {
-    padding-top: 80px;
-  }
-}
-
 html {
   scroll-behavior: smooth;
+}
+
+/* Push the entire page down so the Hero image starts AFTER the navbar */
+body {
+  padding-top: 63px; /* Adjust this to your mobile navbar height */
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 63px; /* Adjust this to your desktop navbar height */
+  }
+}
+.myLine {
+  border-radius: 2px; /* Optional: gives the line slightly rounded edges */
 }/*# sourceMappingURL=style.css.map */

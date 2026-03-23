@@ -10,6 +10,28 @@
   
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; // This adds a cool "parallax" effect when scrolling
+  background-attachment: scroll; // This adds a cool "parallax" effect when scrolling
+}
+
+.hero-bakery h1 {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow for the big title */
+}
+
+/* Targets the Description Paragraph */
+.hero-bakery p.lead {
+  font-weight: 500 !important; /* Overrides Bootstrap's default lead weight */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 700px; /* Optional: keeps the text from stretching too wide on desktop */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaBtn {
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px); /* Subtle lift effect */
+  }
 }
 

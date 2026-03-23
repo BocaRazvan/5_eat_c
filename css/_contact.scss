@@ -5,15 +5,8 @@
     border-radius: 1.5rem;
     transition: transform 0.3s ease;
   }
+  
 
-
-
-  .btn-outline-primary {
-    
-    &:hover {
-      color: white;
-    }
-  }
 
   iframe {
     filter: grayscale(0.2) contrast(1.1); // Gives the map a slightly more "editorial" look

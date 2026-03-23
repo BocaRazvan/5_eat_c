@@ -1,0 +1,20 @@
+// _colors.scss
+
+// 1. BRAND COLORS
+$primary:    #7bbc76;    // Deep Artisan Green (Professional)
+$secondary:  #C5A059;    // Soft Gold (Premium)
+$bg-cream:   #FDF8F1;    // Warm Vanilla Background (Easier on the eyes than white)
+$accent-red: #B22222;    // Deep Cherry (Use sparingly for alerts/borders)
+
+// 2. TEXT COLORS
+$text-main:    #2A2A2A;  // Soft Black
+$text-muted:   #6C757D;  // Grey
+$text-on-dark: #FFFFFF;  // For Hero/Navbar
+
+// 3. UI ELEMENTS (Glass effect)
+$navbar-glass: rgba($primary, 0.85);
+$card-shadow:  rgba(0, 0, 0, 0.08);
+
+// 4. FUNCTIONAL
+$success: #28a745;
+$white:   #ffffff;

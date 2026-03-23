@@ -7,16 +7,15 @@
 }
 
 #mainNavbar {
-  background-color: #209a89 !important; // Dark background for contrast
-  box-shadow: 0 2px 5px rgba(0,0,0,0.5); // Subtle shadow for depth
-  border-bottom: 1px solid #df0a0a !important; // Pink border for a playful touch
+  /* Change the solid color to a semi-transparent one (RGBA) */
+  -webkit-backdrop-filter: blur(1px) ;
+  backdrop-filter: blur(1px) ;
+  /* Adding a thin, light top border makes the 'glass' look like it has an edge */
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
   
   .nav-link {
-    color: #f8f9fa !important; // Light text for readability
-    transition: color 0.3s ease;
-    
-    &:hover {
-      color: #ff69b4 !important; // Pink hover effect for a playful touch
-    }
+    transition: color 0.3s ease; 
   }
-}
