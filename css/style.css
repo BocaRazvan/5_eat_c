@@ -1,0 +1,220 @@
+.hero-bakery {
+  min-height: 80vh; /* Fallback for older browsers */
+  min-height: 70dvh; /* The "Smart" mobile height */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/mini2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* _products.scss */
+.product-card {
+  transition: transform 0.3s ease;
+}
+.product-card .position-relative.overflow-hidden {
+  width: 100%;
+  aspect-ratio: 4/3;
+}
+@media (min-width: 768px) {
+  .product-card .position-relative.overflow-hidden {
+    aspect-ratio: 16/9;
+  }
+}
+.product-card .position-relative.overflow-hidden img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.product-card .card-body {
+  padding: 0.8rem !important;
+}
+@media (min-width: 768px) {
+  .product-card .card-body {
+    padding: 1.5rem !important;
+  }
+}
+.product-card .card-title {
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+@media (min-width: 768px) {
+  .product-card .card-title {
+    font-size: 1.25rem;
+  }
+}
+.product-card .card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.75rem;
+}
+.product-card .text-dark.fw-bold {
+  font-size: 0.7rem !important;
+}
+@media (min-width: 768px) {
+  .product-card .text-dark.fw-bold {
+    font-size: 1.25rem !important;
+  }
+}
+.product-card .badge {
+  font-size: 0.6rem !important;
+  padding: 0.35em 0.65em !important;
+  margin: 0.5rem !important;
+}
+@media (min-width: 768px) {
+  .product-card .badge {
+    font-size: 0.8rem !important;
+    margin: 1rem !important;
+  }
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* _offcanvas.scss */
+.offcanvas .nav-pills {
+  background-color: #f8f9fa;
+  padding: 5px;
+  border-radius: 50px;
+}
+.offcanvas .nav-pills .nav-link {
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+.offcanvas .nav-pills .nav-link.active {
+  color: white !important;
+}
+.offcanvas .offcanvas-body .tab-pane {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.navbar-transition {
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+#mainNavbar {
+  background-color: #209a89 !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #df0a0a !important;
+}
+#mainNavbar .nav-link {
+  color: #f8f9fa !important;
+  transition: color 0.3s ease;
+}
+#mainNavbar .nav-link:hover {
+  color: #ff69b4 !important;
+}
+
+/* _events.scss */
+#about .img-fluid {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.6s ease;
+  height: 250px !important;
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+}
+@media (min-width: 992px) {
+  #about .img-fluid {
+    height: 450px !important;
+    aspect-ratio: auto;
+  }
+}
+#about .img-fluid:hover {
+  transform: scale(1.03);
+}
+@media (max-width: 991px) {
+  #about .col-lg-6:last-child {
+    margin-top: -1.5rem;
+  }
+}
+
+/* _contact.scss */
+#contact .card {
+  border-radius: 1.5rem;
+  transition: transform 0.3s ease;
+}
+#contact .btn-outline-primary:hover {
+  color: white;
+}
+#contact iframe {
+  filter: grayscale(0.2) contrast(1.1);
+}
+
+#contact .map-container {
+  width: 100%;
+  position: relative;
+  height: 250px !important;
+}
+@media (min-width: 992px) {
+  #contact .map-container {
+    height: 100% !important;
+    min-height: 450px;
+  }
+}
+#contact .map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+}
+
+/* _footer.scss */
+footer {
+  background-color: #1a1a1a !important;
+}
+footer .filter-white {
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+footer .text-secondary {
+  color: #a0a0a0 !important;
+  transition: color 0.3s ease;
+}
+footer .text-secondary:hover {
+  color: greenyellow !important;
+}
+footer i {
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+footer i:hover {
+  color: pink;
+  transform: translateY(-3px);
+}
+footer .text-primary {
+  color: blue !important;
+}
+
+body {
+  padding-top: 70px;
+}
+@media (min-width: 992px) {
+  body {
+    padding-top: 80px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}/*# sourceMappingURL=style.css.map */

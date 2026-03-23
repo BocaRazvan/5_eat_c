@@ -1,0 +1,15 @@
+.hero-bakery {
+  // Set the height of your hero section
+ min-height: 80vh;  /* Fallback for older browsers */
+  min-height: 70dvh; /* The "Smart" mobile height */
+  
+  // The Background Image Logic
+  // We add a dark tint (rgba 0,0,0,0.5) over the image
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('../assets/img/mini2.jpg');
+  
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; // This adds a cool "parallax" effect when scrolling
+}
+

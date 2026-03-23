@@ -1,0 +1,28 @@
+@import "./hero";
+
+@import "./products"; 
+
+@import "./offcanvas";
+
+@import "./navbar";    
+
+@import "./events"; 
+
+@import "./contact";
+
+@import "./footer";
+
+body {
+  padding-top: 70px; // Default height for mobile/tablet
+
+  @media (min-width: 992px) {
+    padding-top: 80px; // Desktop navbars are usually slightly taller
+  }
+}
+
+// Optional: Smooth scroll adjustment
+// This ensures that when you click "Produse", the section title 
+// doesn't get covered by the navbar.
+html {
+  scroll-behavior: smooth; // This makes the jump feel like a slide
+}

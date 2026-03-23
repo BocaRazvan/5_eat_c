@@ -1,0 +1,22 @@
+.navbar-transition {
+  transition: transform 0.3s ease-in-out; // Smooth sliding animation
+}
+
+.navbar-hidden {
+  transform: translateY(-100%); // Moves the navbar completely off-screen
+}
+
+#mainNavbar {
+  background-color: #209a89 !important; // Dark background for contrast
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5); // Subtle shadow for depth
+  border-bottom: 1px solid #df0a0a !important; // Pink border for a playful touch
+  
+  .nav-link {
+    color: #f8f9fa !important; // Light text for readability
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: #ff69b4 !important; // Pink hover effect for a playful touch
+    }
+  }
+}

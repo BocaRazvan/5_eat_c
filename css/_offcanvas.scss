@@ -1,0 +1,35 @@
+
+
+/* _offcanvas.scss */
+
+.offcanvas {
+  .nav-pills {
+    background-color: #f8f9fa;
+    padding: 5px;
+    border-radius: 50px; // Rounded "pill" look for the menu
+    
+    .nav-link {
+      
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      
+      &.active {
+       
+        color: white !important;
+       
+      }
+    }
+  }
+
+  .offcanvas-body {
+    // Smoother transition between tabs
+    .tab-pane {
+      animation: fadeIn 0.4s ease-in-out;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
