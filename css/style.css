@@ -118,27 +118,6 @@
     transform: translateY(0);
   }
 }
-.navbar-transition {
-  transition: transform 0.3s ease-in-out;
-}
-
-.navbar-hidden {
-  transform: translateY(-100%);
-}
-
-#mainNavbar {
-  /* Change the solid color to a semi-transparent one (RGBA) */
-  backdrop-filter: blur(1px);
-  /* Adding a thin, light top border makes the 'glass' look like it has an edge */
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-}
-
-.nav-link {
-  transition: color 0.3s ease;
-}
-
 /* _events.scss */
 #about .img-fluid {
   width: 100%;
@@ -222,18 +201,4 @@ footer .text-primary {
 
 html {
   scroll-behavior: smooth;
-}
-
-/* Push the entire page down so the Hero image starts AFTER the navbar */
-body {
-  padding-top: 63px; /* Adjust this to your mobile navbar height */
-}
-
-@media (min-width: 992px) {
-  body {
-    padding-top: 63px; /* Adjust this to your desktop navbar height */
-  }
-}
-.myLine {
-  border-radius: 2px; /* Optional: gives the line slightly rounded edges */
 }/*# sourceMappingURL=style.css.map */

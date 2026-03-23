@@ -24,18 +24,5 @@ html {
   scroll-behavior: smooth; // This makes the jump feel like a slide
 }
 
-/* Push the entire page down so the Hero image starts AFTER the navbar */
-body {
-  padding-top: 63px; /* Adjust this to your mobile navbar height */
-}
 
-@media (min-width: 992px) {
-  body {
-    padding-top: 63px; /* Adjust this to your desktop navbar height */
-  }
-}
-
-.myLine {
-  border-radius: 2px; /* Optional: gives the line slightly rounded edges */
-}
 
