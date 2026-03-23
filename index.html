@@ -14,7 +14,7 @@
 <body>
 
 <!--NAVBAR---------------------------------------------------------------------------------------------->
-<nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-transition">
+<nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-light ">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
       <img src="./assets/img/logo-1-1.png" alt="Eat Cake" width="120" height="40"
@@ -394,19 +394,7 @@
   const navLinks = document.querySelectorAll('.nav-link');
   const toggler = document.querySelector('.navbar-toggler');
   let lastScrollTop = 0;
-  // --- SMART NAVBAR HIDE/SHOW ---
-  window.addEventListener('scroll', function () {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const isMobileMenuOpen = menuToggle.classList.contains('show');
-    if (!isMobileMenuOpen) {
-      if (scrollTop > lastScrollTop && scrollTop > 100) {
-        navbar.classList.add('navbar-hidden');
-      } else {
-        navbar.classList.remove('navbar-hidden');
-      }
-    }
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-  }, false);
+
   // --- CLOSE MENU ON CLICK (MOBILE) ---
   navLinks.forEach((l) => {
     l.addEventListener('click', () => {
