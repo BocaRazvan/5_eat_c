@@ -46,6 +46,12 @@ body {
     width: 100%;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
 // 6. YOUR CUSTOM COMPONENTS
 @import "./hero";
 @import "./nav";

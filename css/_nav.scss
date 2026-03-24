@@ -20,6 +20,9 @@
 .navbar-brand img {
   width: 250px;
   height: auto;
+  // ADD THIS: Prevents the animation from triggering layout shifts
+  will-change: transform, opacity; 
+  max-width: 100%; // Ensure it never exceeds its parent
   // Bouncy entrance + Continuous pulse
   animation: logoEntrance 2s ease-out, logoPulse 3s ease-in-out 2s infinite;
   transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
