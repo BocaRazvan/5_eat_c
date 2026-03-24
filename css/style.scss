@@ -42,8 +42,11 @@ $theme-colors: map-merge($theme-colors, (
 
 body {
     background-color: $myAll;
+    overflow-x: hidden; // This prevents the side-menu from creating a scrollbar
+    width: 100%;
 }
 
 // 6. YOUR CUSTOM COMPONENTS
 @import "./hero";
 @import "./nav";
+

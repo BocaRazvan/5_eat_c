@@ -11985,6 +11985,8 @@ textarea.form-control-lg {
 
 body {
   background-color: #B6B6B4;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* --- NAVBAR CONTAINER --- */
