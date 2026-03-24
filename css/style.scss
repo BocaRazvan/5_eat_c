@@ -1,28 +1,49 @@
-@import "./colors";
+// 1. FUNCTIONS (Required for color manipulation)
+@import "../node_modules/bootstrap/scss/functions";
 
-@import "./hero";
-
-@import "./products"; 
-
-@import "./offcanvas";
-
-@import "./navbar";    
-
-@import "./events"; 
-
-@import "./contact";
-
-@import "./footer";
+// 2. YOUR VARIABLES
+$primary: #3d2c22;
+$secondary: #ab5f90;
+$success: #09bb09;
+$info: #1cdfa8;
+$warning: #400b49;
+$danger: #ff0000;
 
 
+$myAll: #B6B6B4;
 
 
-// Optional: Smooth scroll adjustment
-// This ensures that when you click "Produse", the section title 
-// doesn't get covered by the navbar.
-html {
-  scroll-behavior: smooth; // This makes the jump feel like a slide
+// 3. BOOTSTRAP CORE VARIABLES (Required for maps)
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// 4. THEME MAP MERGE (This is the "Theme Function" part)
+// This ensures utilities like .text-primary or .bg-primary use your colors
+$theme-colors: map-merge($theme-colors, (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger
+
+));
+
+
+
+// 5. THE REST OF BOOTSTRAP
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+.bg-myAll {
+    background-color: $myAll !important;
 }
 
+body {
+    background-color: $myAll;
+}
 
-
+// 6. YOUR CUSTOM COMPONENTS
+@import "./hero";
+@import "./nav";

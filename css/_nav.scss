@@ -1,0 +1,126 @@
+/* --- NAVBAR CONTAINER --- */
+.navbar {
+  background-color: #98FF98; // Your Mint color
+  box-shadow: 0 4px 6px rgba(0,0,0,0.175);
+  border-bottom: 1px solid $secondary;
+}
+
+/* --- LOGO & ANIMATIONS --- */
+@keyframes logoEntrance {
+  from { opacity: 0; transform: scale(0) rotate(-10deg); }
+  to { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+@keyframes logoPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.navbar-brand img {
+  width: 250px;
+  height: auto;
+  // Bouncy entrance + Continuous pulse
+  animation: logoEntrance 2s ease-out, logoPulse 3s ease-in-out 2s infinite;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  @media (max-width: 576px) {
+    width: 200px;
+  }
+
+  &:hover {
+    transform: scale(1.1) !important;
+  }
+}
+
+/* --- LINKS & UNDERLINE EFFECT --- */
+.navbar-nav .nav-link {
+  position: relative;
+  color: $primary !important; // Chocolate
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  transition: all 0.2s ease;
+  padding: 0.5rem 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: $secondary; // Caramel line
+    transition: all 0.2s ease;
+    transform: translateX(-50%);
+  }
+
+  &:hover {
+    color: $secondary !important;
+    &::after { width: 100%; }
+  }
+}
+
+/* --- TOGGLER (MOBILE) --- */
+.navbar-toggler {
+  border: none !important;
+  outline: none !important;
+  &:hover .navbar-toggler-icon {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+  }
+}
+
+/* --- CUSTOM UTILITY --- */
+.nav-extra-squeeze {
+  padding-left: 20% !important;
+  padding-right: 19% !important;
+
+  @media (max-width: 992px) {
+    padding-left: 5% !important; // Fixed: was 20% on mobile, which is too much!
+    padding-right: 5% !important;
+  }
+}
+
+.navbar-nav {
+  @media (min-width: 992px) {
+    .nav-item:not(:last-child) {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      // The Vertical Separator
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 2px;      // Thickness of the line
+        height: 30px;    // Height of the line
+        background-color: rgba($primary, 0.3); // Faded Chocolate
+        margin-left: 1.5rem; // Space after the link before the line
+        margin-right: -0.5rem; // Adjusts the gap for the next link
+      }
+    }
+  }
+}
+
+.navbar-nav {
+  // MOBILE STYLES
+  @media (max-width: 991.98px) {
+    .nav-item:not(:last-child) {
+      border-bottom: 2px solid rgba($primary, 0.3); // Very faint Chocolate line
+      margin-bottom: 0.5rem; // Space between the link and the line
+      padding-bottom: 0.5rem; // Space between the text and the line
+    }
+    
+    .nav-link {
+      text-align: center; // Keeps it clean on mobile
+      font-size: 1.1rem;   // Makes links easier to tap on a phone
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    padding-top: 1.3rem ; // Gives the links "room to breathe" when the menu opens
+   padding-bottom: 1.3rem ; 
+  }
+}
