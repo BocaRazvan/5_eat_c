@@ -1,0 +1,45 @@
+/* ==========================================================================
+   FOOTER STYLES
+   ========================================================================== */
+
+.footer {
+  /* Use a slightly different shade than your body background 
+     to give it a distinct "base" feel */
+  background-color: rgba($primary, 0.5); 
+  border-top: 1px solid rgba($primary, 0.1);
+
+  .footer-link {
+    text-decoration: none;
+    color: $secondary;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .bi-heart-fill {
+    font-size: 0.8rem;
+    display: inline-block;
+    animation: heartbeat 1.5s ease infinite;
+  }
+}
+
+// Subtle heartbeat animation for the icon in the footer
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+// Mobile Tweak
+@media (max-width: 767px) {
+  .footer {
+    .list-unstyled {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

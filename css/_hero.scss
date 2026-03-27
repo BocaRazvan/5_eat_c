@@ -1,0 +1,85 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  
+  // Use 'background' shorthand to keep the gradient and image together safely
+  background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 30%), 
+              url('../assets/img/hero.jpg') center/cover no-repeat;
+
+  .container {
+    // This works perfectly with align-items-end
+    margin-bottom: 3rem; 
+  }
+
+
+  h1 { 
+    color: #ffffff;
+    text-shadow: 
+    0px 2px 4px rgba(0, 0, 0, 0.5),   // Sharp definition
+    0px 4px 10px rgba(0, 0, 0, 0.3),  // Medium soft
+    0px 10px 30px rgba(0, 0, 0, 0.2); // Large ambient depth    
+    letter-spacing: -1px;
+    line-height: 1; // Forces the box to wrap tightly around the letters
+    
+  }
+
+  @media (max-width: 576px) {
+    height: 78vh;
+    
+    h1 { 
+      // display-1 is roughly 5rem; on tiny phones, 3.5rem is safer
+      font-size: 1.7rem; 
+      letter-spacing: -1px;
+    }
+
+    .container {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.hero-title-box {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: rgba(20, 18, 18, 0.644); // Very transparent white
+  backdrop-filter: blur(5px);          // The "Magic" blur effect
+  border-radius: 15px;
+}
+
+// Define the shaking motion
+@keyframes ring {
+  0% { transform: rotate(0); }
+  10% { transform: rotate(15deg); }
+  20% { transform: rotate(-15deg); }
+  30% { transform: rotate(15deg); }
+  40% { transform: rotate(-15deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(-10deg); }
+  100% { transform: rotate(0); }
+}
+
+.ring-icon {
+  display: inline-block; // Necessary for transform to work
+  animation: ring 3s ease infinite; // Plays for 2s, then repeats
+  
+  // Optional: If you want it to "rest" between rings, 
+  // you can adjust the keyframe percentages or the duration.
+}
+
+.myBtn1 {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); // Smooth, natural movement
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); // Starting "resting" shadow
+  border: none; // Cleaner look for high-elevation buttons
+  
+  &:hover {
+    transform: translateY(-5px) scale(1.05); // Move UP and scale
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); // Deep, soft shadow
+    background-color: lighten($secondary, 5%); // Optional: slight color shift
+  }
+
+  &:active {
+    transform: translateY(-2px) scale(1.02); // "Sinks" slightly when clicked
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  }
+}

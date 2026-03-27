@@ -1,0 +1,99 @@
+/* ==========================================================================
+   DESPRE NOI (About Us Styles)
+   ========================================================================== */
+
+.about-us-section {
+  
+  .text-secondary {
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+  }
+
+  .about-content {
+    line-height: 1.8;
+    
+    strong { 
+      color: $primary;
+      font-weight: 600;
+    }
+  }
+
+  // Custom Blockquote styling
+  .custom-blockquote {
+    border-left: 4px solid $primary;
+    font-style: italic;
+    font-size: 1.25rem;
+    background-color: rgba($primary, 0.05);
+    padding: 20px;
+    border-radius: 0 15px 15px 0;
+  }
+}
+
+// Image & Badge Styling
+.about-image-stack {
+  position: relative;
+  
+  .main-story-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border: 15px solid #fff; // Polarod/Frame effect
+  }
+
+  .experience-badge {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    background-color: $secondary; // Chocolate brown or grey
+    color: white;
+    padding: 25px;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: floating 3s ease-in-out infinite;
+
+    .number {
+      font-size: 1.8rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .text {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+}
+
+// Simple floating animation for the badge
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+// Mobile Adjustments
+@media (max-width: 991px) {
+  .about-image-stack {
+    margin-bottom: 40px;
+    
+    .main-story-img { 
+      height: 350px;
+    }
+    
+    .experience-badge {
+      width: 100px;
+      height: 100px;
+      bottom: -10px;
+      left: 10px;
+      
+      .number { font-size: 1.4rem; }
+      .text { font-size: 0.7rem; }
+    }
+  }
+}

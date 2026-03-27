@@ -11,6 +11,7 @@ $danger: #ff0000;
 
 
 $myAll: #B6B6B4;
+$myAccent: #98FF98; 
 
 
 // 3. BOOTSTRAP CORE VARIABLES (Required for maps)
@@ -52,7 +53,31 @@ html, body {
   position: relative;
 }
 
-// 6. YOUR CUSTOM COMPONENTS
-@import "./hero";
-@import "./nav";
+// 6. YOUR CUSTOM COMPONENTs
 
+@import "./nav";
+@import "./hero";
+@import "./produse";
+@import "./modal";
+@import "./marquee";
+@import "./evenim";
+@import "./despre";
+@import "./contact"; 
+@import "./footer";
+
+
+.myBtn2 {
+  background-color: $myAccent;
+  border-color: $myAccent;
+  transition: all 0.3s ease; // Esențial pentru o mișcare fluidă, nu bruscă
+  color: $primary;
+
+  &:hover {
+    background-color: darken($myAccent, 10%); // O face cu 10% mai închisă
+    border-color: darken($myAccent, 12%);
+    color: darken($primary, 30%);; // Sau ce culoare de contrast dorești
+    transform: translateY(-3px); // Ridică butonul puțin (efect de "plutire")
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); // Adaugă o umbră la hover
+   
+  }
+}

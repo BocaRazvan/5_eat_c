@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Eat Cake</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
@@ -13,11 +14,10 @@
 <body>
 
 <!--NAVBAR---------------------------------------------------------------------------------------------->
-<nav id="mainNavbar" class="navbar navbar-expand-lg bg-mybar">
+<nav id="mainNavbar" class="navbar navbar-expand-lg">
   <div class="container-fluid nav-extra-squeeze ">
     <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="./assets/img/logo-1-1.png" alt="Eat Cake" 
-        class="d-inline-block align-text-top ">
+      <img src="./assets/img/logo-1-1.png" alt="Eat Cake" class="d-inline-block align-text-top ">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -25,199 +25,31 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto align-items-lg-center">
         <li class="nav-item me-4">
-          <a class="nav-link fs-5" href="#menu">Produse</a>
+          <a class="nav-link fs-5" href="#menu"><i class="bi bi-cake2 me-2"></i>Produse</a>
         </li>
         <li class="nav-item me-4">
-          <a class="nav-link fs-5" href="#about">Evenimente</a>
+          <a class="nav-link fs-5" href="#about"><i class="bi bi-calendar me-2"></i>Evenimente</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link fs-5" href="#contact"><i class="bi bi-info-circle me-2"></i>Despre noi</a>
         </li>
         <li class="nav-item me-4">
-          <a class="nav-link fs-5" href="#contact">Contact</a>
-        </li>
-                <li class="nav-item ">
-          <a class="nav-link fs-5" href="#contact">Despre noi</a>
+          <a class="nav-link fs-5" href="#contact"><i class="bi bi-telephone me-2"></i>Contact</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-
 <!--HERO---------------------------------------------------------------------------------------------->
-<header class="hero-bakery d-flex align-items-center border-bottom ">
-  <div class="container text-center">
-    <div class="row justify-content-center">
-      <div class="col-lg-8 "> 
-        <h1 class="display-5 fw-bold mb-3 text-white">De la pasiune la creație!</h1>
-        <p class="lead mb-3 text-white">
-          Descoperă gustul prăjiturilor artizanale, încântă-ți papilele gustative cu 
-          minunatele noastre povești comestibile.
-        </p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center pt-3">
-          <a href="#menu" class="btn btn-primary btn-lg px-5 ctaBtn">Comandă acum</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!--PRODUSE---------------------------------------------------------------------------------------------->
-<section id="menu" >
-  <div class="container py-4">
-    <div class="text-center mb-3">
-      <h2 class="display-5 fw-bold">Produse</h2>
-      <div class="myLine mx-auto mb-2"></div>
-      <p class="lead">Fiecare felie spune o poveste.<br> Alege-ți favorita!</p>
-    </div>
-    <div class="row g-4">
-      <div class="col-6 col-md-4">
-        <div class="card h-100 shadow-sm border-0 product-card bg-secondary">
-          <div class="position-relative overflow-hidden ">
-            <img src="./assets/img/bisc.jpg" class="card-img-top " alt="Cake Name" loading="lazy">
-            <span class="badge bg-secondary position-absolute top-0 end-0 m-3 rounded-pill">Nou</span>
-          </div>
-          <div class="card-body p-4">
-            <h5 class="card-title text-primary fw-bold mb-2">Cheesecake cu Fructe de Pădure</h5>
-            <p class="card-text text-muted small">O bază crocantă de biscuiți, cremă fină de brânză și un strat generos
-              de fructe proaspete.</p>
-            <div class="myPret d-flex justify-content-between align-items-center mt-3">
-              <span id="price1" class="fs-5 fw-bold">25 RON / felie</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4">
-        <div class="card h-100 shadow-sm border-0 product-card">
-          <div class="position-relative overflow-hidden">
-            <img src="./assets/img/felie5.jpg" class="card-img-top" alt="Cake Name" loading="lazy">
-            <span class="badge bg-primary position-absolute top-0 end-0 m-3 rounded-pill">Nou</span>
-          </div>
-          <div class="card-body p-4">
-            <h5 class="card-title fw-bold mb-2">Cheesecake cu Fructe de Pădure</h5>
-            <p class="card-text text-muted small">O bază crocantă de biscuiți, cremă fină de brânză și un strat generos
-              de fructe proaspete.</p>
-            <div class="d-flex justify-content-between align-items-center mt-3">
-              <span id="price2" class="fs-5 fw-bold text-dark">25 RON / felie</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4">
-        <div class="card h-100 shadow-sm border-0 product-card">
-          <div class="position-relative overflow-hidden">
-            <img src="./assets/img/bisc.jpg" class="card-img-top" alt="Cake Name" loading="lazy">
-            <span class="badge bg-primary position-absolute top-0 end-0 m-3 rounded-pill">Nou</span>
-          </div>
-          <div class="card-body p-4">
-            <h5 class="card-title fw-bold mb-2">Cheesecake cu Fructe de Pădure</h5>
-            <p class="card-text text-muted small">O bază crocantă de biscuiți, cremă fină de brânză și un strat generos
-              de fructe proaspete.</p>
-            <div class="d-flex justify-content-between align-items-center mt-3">
-              <span id="price3" class="fs-5 fw-bold text-dark">25 RON / felie</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4">
-        <div class="card h-100 shadow-sm border-0 product-card">
-          <div class="position-relative overflow-hidden">
-            <img src="./assets/img/bisc.jpg" class="card-img-top" alt="Cake Name" loading="lazy">
-            <span class="badge bg-primary position-absolute top-0 end-0 m-3 rounded-pill">Nou</span>
-          </div>
-          <div class="card-body p-4">
-            <h5 class="card-title fw-bold mb-2">Cheesecake cu Fructe de Pădure</h5>
-            <p class="card-text text-muted small">O bază crocantă de biscuiți, cremă fină de brânză și un strat generos
-              de fructe proaspete.</p>
-            <div class="d-flex justify-content-between align-items-center mt-3">
-              <span id="price4" class="fs-5 fw-bold text-dark">25 RON / felie</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4">
-        <div class="card h-100 shadow-sm border-0 product-card">
-          <div class="position-relative overflow-hidden">
-            <img src="./assets/img/bisc.jpg" class="card-img-top" alt="Cake Name" loading="lazy">
-            <span class="badge bg-primary position-absolute top-0 end-0 m-3 rounded-pill">Nou</span>
-          </div>
-          <div class="card-body p-4">
-            <h5 class="card-title fw-bold mb-2">Cheesecake cu Fructe de Pădure</h5>
-            <p class="card-text text-muted small">O bază crocantă de biscuiți, cremă fină de brânză și un strat generos
-              de fructe proaspete.</p>
-            <div class="d-flex justify-content-between align-items-center mt-3">
-              <span id="price5" class="fs-5 fw-bold text-dark">25 RON / felie</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4">
-        <div class="card h-100 shadow-sm border-0 product-card">
-          <div class="position-relative overflow-hidden">
-            <img src="./assets/img/bisc.jpg" class="card-img-top" alt="Cake Name" loading="lazy">
-            <span class="badge bg-primary position-absolute top-0 end-0 m-3 rounded-pill">Nou</span>
-          </div>
-          <div class="card-body p-4">
-            <h5 class="card-title fw-bold mb-2">Cheesecake cu Fructe de Pădure</h5>
-            <p class="card-text text-muted small">O bază crocantă de biscuiți, cremă fină de brânză și un strat generos
-              de fructe proaspete.</p>
-            <div class="d-flex justify-content-between align-items-center mt-3">
-              <span id="price6" class="fs-5 fw-bold text-dark">25 RON / felie</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!--EVENIMENTE---------------------------------------------------------------------------------------------->
-<hr>
-<section id="about" class="py-3 ">
-  <div class="container py-lg-5">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-6">
-        <div class="position-relative">
-          <img src="./assets/img/mini2.jpg" class="img-fluid rounded-4 shadow-lg w-100" alt="Candy Bar Evenimente"
-            style="height: 450px; object-fit: cover;" loading="lazy">
-          <div class="position-absolute bottom-0 start-0 m-4 bg-white p-3 rounded-3 shadow d-none d-md-block"
-            style="max-width: 200px;">
-            <p class="mb-0 fw-bold text-dark small">Peste 100 de evenimente</p>
-            <small class="text-muted" style="font-size: 0.75rem;">îndulcite în Cluj-Napoca și împrejurimi</small>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <h6 class="text-primary fw-bold text-uppercase mb-3" style="letter-spacing: 2px;">Servicii Premium</h6>
-        <h2 class="display-5 fw-bold mb-4">Candy Bar & Torturi de Eveniment</h2>
-        <p class="lead text-muted mb-4">
-          Transformăm nunta, botezul sau evenimentul tău corporate într-o experiență memorabilă. Fiecare Candy Bar este
-          creat special pentru a se potrivi tematicii tale.
-        </p>
-        <div class="row g-3 mb-4">
-          <div class="col-12 d-flex align-items-start">
-            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
-              style="width: 32px; height: 32px; flex-shrink: 0;">
-              <small>✓</small>
-            </div>
-            <div>
-              <h6 class="fw-bold mb-1">Design Personalizat</h6>
-              <p class="small text-muted mb-0">Adaptăm culorile, aromele și decorul în funcție de locație.</p>
-            </div>
-          </div>
-          <div class="col-12 d-flex align-items-start">
-            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
-              style="width: 32px; height: 32px; flex-shrink: 0;">
-              <small>✓</small>
-            </div>
-            <div>
-              <h6 class="fw-bold mb-1">Livrare și Montaj</h6>
-              <p class="small text-muted mb-0">Ne ocupăm de tot procesul, de la transport la aranjarea pe masă.</p>
-            </div>
-          </div>
-        </div>
-        <div class="d-grid d-md-block">
-          <a href="https://wa.me/407xxxxxxxx" class="btn btn-primary btn-lg px-5 rounded-pill shadow-sm">
-            Cere o ofertă pe WhatsApp
+<section class="hero d-flex align-items-end justify-content-center ">
+  <div class="container"> 
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="display-1 fw-bold hero-title-box">De la pasiune la <span class="text-secondary">creatie</span></h1>
+          <div class="mt-4">
+          <a href="tel:+12025550101" class="btn btn-secondary btn-lg w-50 myBtn1">
+            <i class="bi bi-telephone-fill me-3 ring-icon"></i>Suna acum!
           </a>
         </div>
       </div>
@@ -225,57 +57,231 @@
   </div>
 </section>
 
-<!--CONTACT---------------------------------------------------------------------------------------------->
-<section id="contact" class="py-5 ">
-  <div class="container py-lg-4">
-    <div class="text-center mb-5">
-      <h2 class="display-5 fw-bold text-dark">Contactează-ne</h2>
-      <div class=" mx-auto  mb-3" style="height: 4px; width: 100px;"></div>
-      <p class="lead text-muted">Te așteptăm în laboratorul nostru pentru o porție de fericire.</p>
+<!--PRODUSE---------------------------------------------------------------------------------------------->
+<section id="menu">
+  <div class="container mt-4 px-1">
+    <div class="text-start mb-4">
+      <h2 class="display-5 fw-bold text-primary myHeadings">Prajiturile casei</h2>
     </div>
-    <div class="row g-5">
-      <div class="col-lg-5">
-        <div class="card border-0 shadow-sm p-4 h-100 bg-light">
-          <h4 class="fw-bold mb-4">Informații Utile</h4>
-          <div class="d-flex mb-4">
-            <div class="text-primary fs-4 me-3"><i class="bi bi-geo-alt-fill"></i></div>
-            <div>
-              <h6 class="fw-bold mb-1">Adresă</h6>
-              <p class="text-muted mb-0">Strada Eroilor, Nr. 10, Cluj-Napoca</p>
-            </div>
+    <div class="row g-4">
+
+      <div class="col-6 col-lg-3">
+        <div class="card h-100 cake-card">
+          <div class="overflow-hidden">
+            <img src="./assets/img/felie1.jpg" class="card-img-top" alt="Tort de Ciocolată">
           </div>
-          <div class="d-flex mb-4">
-            <div class="text-primary fs-4 me-3"><i class="bi bi-telephone-fill"></i></div>
-            <div>
-              <h6 class="fw-bold mb-1">Telefon / WhatsApp</h6>
-              <p class="text-muted mb-0">+40 7xx xxx xxx</p>
-            </div>
-          </div>
-          <div class="d-flex mb-4">
-            <div class="text-primary fs-4 me-3"><i class="bi bi-envelope-fill"></i></div>
-            <div>
-              <h6 class="fw-bold mb-1">Email</h6>
-              <p class="text-muted mb-0">contact@eatcake.ro</p>
-            </div>
-          </div>
-          <div class="mt-auto">
-            <h6 class="fw-bold mb-3">Urmărește-ne</h6>
-            <div class="d-flex gap-3">
-              <a href="#"
-                class="btn btn-outline-primary rounded-circle p-2 d-flex align-items-center justify-content-center"
-                style="width: 40px; height: 40px;"><i class="bi bi-instagram"></i></a>
-              <a href="#"
-                class="btn btn-outline-primary rounded-circle p-2 d-flex align-items-center justify-content-center"
-                style="width: 40px; height: 40px;"><i class="bi bi-facebook"></i></a>
-              <a href="#"
-                class="btn btn-outline-primary rounded-circle p-2 d-flex align-items-center justify-content-center"
-                style="width: 40px; height: 40px;"><i class="bi bi-tiktok"></i></a>
-            </div>
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title fw-bold mb-2 text-primary">Tort Signature Chocolate</h5>
+            <p class="card-text text-muted mb-3 d-none d-md-block">Mousse de ciocolată belgiană, blat umed și inserție
+              de zmeură.</p>
+            <p class="fs-4 fw-bold text-secondary mt-auto mb-0">150 RON</p>
           </div>
         </div>
       </div>
-      <div class="col-lg-7">
-        <div class="map-container shadow-sm rounded-4 overflow-hidden">
+
+      <div class="col-6 col-lg-3">
+        <div class="card h-100 cake-card">
+          <div class="overflow-hidden">
+            <img src="./assets/img/felie1.jpg" class="card-img-top" alt="Tort de Ciocolată">
+          </div>
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title fw-bold mb-2 text-primary">Tort Signature Chocolate</h5>
+            <p class="card-text text-muted mb-3 d-none d-md-block">Mousse de ciocolată belgiană, blat umed și inserție
+              de zmeură.</p>
+            <p class="fs-4 fw-bold text-secondary mt-auto mb-0">150 RON</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="card h-100 cake-card">
+          <div class="overflow-hidden">
+            <img src="./assets/img/felie1.jpg" class="card-img-top" alt="Tort de Ciocolată">
+          </div>
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title fw-bold mb-2 text-primary">Tort Signature Chocolate</h5>
+            <p class="card-text text-muted mb-3 d-none d-md-block">Mousse de ciocolată belgiană, blat umed și inserție
+              de zmeură.</p>
+            <p class="fs-4 fw-bold text-secondary mt-auto mb-0">150 RON</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="card h-100 cake-card">
+          <div class="overflow-hidden">
+            <img src="./assets/img/felie1.jpg" class="card-img-top" alt="Tort de Ciocolată">
+          </div>
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title fw-bold mb-2 text-primary">Tort Signature Chocolate</h5>
+            <p class="card-text text-muted mb-3 d-none d-md-block">Mousse de ciocolată belgiană, blat umed și inserție
+              de zmeură.</p>
+            <p class="fs-4 fw-bold text-secondary mt-auto mb-0">150 RON</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="mt-4 d-flex flex-column flex-md-row justify-content-md-around align-items-center gap-3 py-4">
+  <a href="#" class="btn btn-outline-primary btn-lg w-auto w-md-25 myBtn2" data-bs-toggle="modal" data-bs-target="#modalProduse">
+    Vezi toate produsele...</a>
+  <a href="#" class="btn btn-outline-primary btn-lg w-auto w-md-25 myBtn2" 
+  data-bs-toggle="modal" 
+  data-bs-target="#modalImagine">Pachete de sarbatori <span class="badge text-bg-danger ms-2">Nou</span>
+  </a>
+</div>
+
+<!---TORTURI--------------------------------------------------------------------------------------------->
+<div class="container mb-3">
+  <div class="text-start mt-3">
+    <h2 class="display-5 fw-bold text-primary myHeadings">Torturi personalizate</h2>
+  </div>
+</div>
+
+<section class="marquee-section overflow-hidden">
+  <div class="container marquee-container">
+    <div class="marquee-content">
+      <img src="./assets/img/tort1.jpg" alt="Cake 1">
+      <img src="./assets/img/tort2.jpg" alt="Cake 2">
+      <img src="./assets/img/tort3.jpg" alt="Cake 3">
+      <img src="./assets/img/tort4.jpg" alt="Cake 4">
+      <img src="./assets/img/tort5.jpg" alt="Cake 5">
+      <img src="./assets/img/tort6.jpg" alt="Cake 6">
+    
+      <img src="./assets/img/tort1.jpg" alt="Cake 1">
+      <img src="./assets/img/tort2.jpg" alt="Cake 2">
+      <img src="./assets/img/tort3.jpg" alt="Cake 3">
+      <img src="./assets/img/tort4.jpg" alt="Cake 4">
+      <img src="./assets/img/tort5.jpg" alt="Cake 5">
+      <img src="./assets/img/tort6.jpg" alt="Cake 6">
+    </div>
+  </div>
+
+<div class="mt-4 ">
+<a href="https://wa.me/407XXXXXXXX?text=Bună%20ziua!%20Aș%20dori%20o%20ofertă%20personalizată%20pentru%20torturi." 
+     target="_blank" 
+     class="btn btn-outline-primary btn-lg w-50 myBtn2 d-flex align-items-center justify-content-center mx-auto text-nowrap">
+    <i class="bi bi-whatsapp me-2"></i> Cere ofertă!
+  </a>
+</div>
+</section>
+
+<!--EVENIMENTE---------------------------------------------------------------------------------------------->
+
+<section id="events" class="events-section py-3">
+  <div class="container mt-4">
+    <div class="row align-items-center g-5">
+      
+      <div class="col-12 col-lg-7">
+        <h2 class="display-5 fw-bold text-primary mb-4 myHeadings">Evenimente de Poveste</h2>
+        
+        <p class="lead text-primary mb-5">
+          De la nunți de poveste la petreceri corporate în inima <span class="text-secondary fw-semibold">Clujului</span>, 
+          creăm torturi și prăjituri care arată spectaculos și au un gust pe măsură.
+        </p>
+        
+        <div class="d-flex flex-wrap gap-4 event-list mb-1">
+          
+          <div class="event-item">
+            <i class="bi bi-heart-fill text-primary"></i>
+            <div>
+              <h5>Nunți</h5>
+              <p>Tortul miresei, Candy Bar tematic, mărturii dulci.</p>
+            </div>
+          </div>
+          
+          <div class="event-item">
+            <i class="bi bi-stars text-primary"></i>
+            <div>
+              <h5>Botezuri</h5>
+              <p>Torturi jucăușe, prăjituri colorate, concepte prietenoase.</p>
+            </div>
+          </div>
+          
+          <div class="event-item">
+            <i class="bi bi-gift-fill text-primary"></i>
+            <div>
+              <h5>Aniversări</h5>
+              <p>Torturi surpriză, platouri cu mini-prăjituri.</p>
+            </div>
+          </div>
+          
+          <div class="event-item">
+            <i class="bi bi-building text-primary"></i>
+            <div>
+              <h5>Corporate</h5>
+              <p>Prăjituri cu logo, lansări de produse, coffee breaks.</p>
+            </div>
+          </div>
+          
+        </div>
+        
+
+      </div>
+      
+      <div class="col-12 col-lg-5 position-relative event-images-wrapper mb-5">
+        <img src="./assets/img/masa1.jpg" alt="Wedding Cake Setup Cluj" class="img-fluid rounded-4 main-event-img shadow-lg">
+        
+        <div class="secondary-event-img-container shadow-lg mt-5">
+          <img src="./assets/img/masa2.jpg" alt="Eat Cake Candy Bar" class="img-fluid rounded-4">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section id="services-included" class="services-included-section  ">
+  <div class="container ">
+
+    
+    <div class="row g-4 text-center justify-content-center">
+      
+      <div class="col-md-4 col-lg-4">
+        <div class="service-card p-2 h-100 shadow-sm rounded-4 bg-white">
+          <div class="icon-box-primary mx-auto mb-2">
+            <i class="bi bi-palette-fill fs-1"></i>
+          </div>
+          <h5 class="fw-bold">Design Personalizat</h5>
+          <p class="text-muted small">Discuții despre tematică, culori și preferințele tale.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-lg-4">
+        <div class="service-card p-2 h-100 shadow-sm rounded-4 bg-white">
+          <div class="icon-box-primary mx-auto mb-2">
+            <i class="bi bi-mortarboard-fill fs-1"></i>
+          </div>
+          <h5 class="fw-bold">Sesiune de Degustare</h5>
+          <p class="text-muted small">Alegi combinațiile perfecte de arome.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-lg-4">
+        <div class="service-card p-2 h-100 shadow-sm rounded-4 bg-white">
+          <div class="icon-box-primary mx-auto mb-2">
+            <i class="bi bi-award-fill fs-1"></i>
+          </div>
+          <h5 class="fw-bold">Ingrediente Premium</h5>
+          <p class="text-muted small">Mousse-uri fine, fructe proaspete, adaptări dietetice.</p>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="row mt-5 justify-content-center">
+      <div class="col-lg-12">
+        <div class="delivery-highlight-box d-flex flex-column flex-md-row align-items-center gap-4 p-4 p-lg-5 text-center text-md-start">
+          <div class="flex-shrink-0">
+            <i class="bi bi-truck-flatbed fs-1 text-secondary"></i>
+          </div>
+          <div class="flex-grow-1">
+            <h4 class="fw-bold text-dark mb-2">Livrare & Montaj la Locație</h4>
+            <p class="text-muted mb-0">Transport cu <span class="fw-semibold">mașini frigorifice autorizate</span> și aranjarea profesionistă a Candy Bar-ului în <span class="text-secondary fw-semibold">Cluj-Napoca și împrejurimi</span>.</p>
+          </div>
 
         </div>
       </div>
@@ -283,52 +289,366 @@
   </div>
 </section>
 
+<!--DESPRE---------------------------------------------------------------------------------------------->
+<section id="contact" class="about-us-section py-5">
+  <div class="container py-lg-5">
+    <div class="row align-items-center g-5">
+      
+      <div class="col-lg-6 ">
+        <h2 class="display-5 fw-bold text-primary mb-4">Din pasiune pură, pentru momente dulci memorabile</h2>
+        
+        <div class="about-content text-muted fs-5">
+
+          
+          <p class="mb-4 lead text-primary">
+            Pasiunea noastră se traduce, în primul rând, prin refuzul de a face rabat de la calitate. Folosim doar <strong>ingrediente premium</strong>: fără premixuri, fără margarină și fără potențiatori de aromă artificiali. Facem prăjiturile exact așa cum le-am face pentru propria noastră familie.
+          </p>
+
+          <blockquote class="blockquote custom-blockquote my-4 ps-4">
+            <p class="mb-0 italic text-primary fw-medium lead text-primary">
+              "Când alegi un desert făcut de noi, alegi o bucățică din povestea și pasiunea familiei noastre."
+            </p>
+          </blockquote>
+
+          <p class="mb-4 lead text-primary">
+            Fiecare decor este <strong>realizat manual</strong>, cu aceeași grijă și aceeași iubire pe care am pus-o în primul nostru tort. Fără scurtături – doar semnătura noastră pe fiecare desert care pleacă din laboratorul nostru către tine.
+          </p>
+        </div>
+
+
+      </div>
+
+      <div class="col-lg-6 order-1 order-lg-2 mt-1 mt-lg-0">
+        <div class="reviews-widget-container shadow-sm p-2 bg-white rounded-5 border">
+          
+          <div class="d-flex align-items-center justify-content-between mb-4 pb-2 border-bottom">
+            <h4 class="fw-bold text-primary mb-0">Ce spun clienții</h4>
+            <div class="text-warning fs-5">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+
+          <script src="https://elfsightcdn.com/platform.js" async></script>
+          <div class="elfsight-app-f283ec52-e4ea-4e25-aec2-1a8f12419e96" data-elfsight-app-lazy></div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!--CONTACT---------------------------------------------------------------------------------------------->
+<section id="contact" class="contact-section py-5">
+  <div class="container py-lg-5">
+    <div class="row g-5 align-items-center justify-content-center text-center">
+      
+      <div class="col-lg-10">
+        <h2 class="display-4 fw-bold text-primary mb-4 myHeadings">Hai să povestim!</h2>
+        <p class="lead text-muted mb-5">
+          Ai o întrebare despre prăjiturile noastre, vrei să plasezi o comandă sau pur și simplu vrei 
+          să ne spui cât de mult ți-a plăcut ultimul tort? Scrie-ne, sună-ne sau fă-ne o vizită. Suntem aici pentru tine!
+        </p>
+
+        <div class="row g-4 justify-content-center mb-4">
+          <div class="col-md-3">
+            <div class="icon-circle mx-auto mb-3"><i class="bi bi-geo-alt-fill"></i></div>
+            <h5 class="fw-bold">Adresa</h5>
+            <p class="text-muted">Strada Ta Nr. 123, Cluj-Napoca</p>
+          </div>
+          <div class="col-md-3">
+            <div class="icon-circle mx-auto mb-3"><i class="bi bi-telephone-fill"></i></div>
+            <h5 class="fw-bold">Telefon</h5>
+            <p class="text-muted mb-0">+40 7XX XXX XXX</p>
+            <p class="text-muted">hello@eatcake.ro</p>
+          </div>
+                    <div class="col-md-3">
+            <div class="icon-circle mx-auto mb-3"><i class="bi bi-telephone-fill"></i></div>
+            <h5 class="fw-bold">Email</h5>
+            <p class="text-muted mb-0">+40 7XX XXX XXX</p>
+            <p class="text-muted">hello@eatcake.ro</p>
+          </div>
+          <div class="col-md-3">
+            <div class="icon-circle mx-auto mb-3"><i class="bi bi-clock-fill"></i></div>
+            <h5 class="fw-bold">Program</h5>
+            <p class="text-muted">L-V: 09:00 - 18:00<br>S: 10:00 - 14:00</p>
+          </div>
+        </div>
+
+        <div class="contact-card-simple mt-4 mt-lg-5 p-4 rounded-5 border-0">
+          
+          <div class="d-flex justify-content-center gap-4">
+            <a href="#" class="social-btn facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-btn instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-btn whatsapp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
 
 <!--FOOTER---------------------------------------------------------------------------------------------->
-<footer class="py-5 bg-dark text-white">
+
+<footer class="footer py-5 mt-5">
   <div class="container">
     <div class="row gy-4 align-items-center">
-      <div class="col-md-4 text-center text-md-start">
+      
+      <div class="col-md-6 text-center text-md-start">
         <a class="navbar-brand d-inline-block mb-3" href="#">
-          <img src="./assets/img/logo-1-1.png" alt="Eat Cake" width="100" class="filter-white">
+          <img src="./assets/img/logo-1-1.png" alt="Eat Cake" style="height: 60px;">
         </a>
-        <p class="small text-secondary">
-          Laborator artizanal în inima Clujului. <br>
-          Creat cu dragoste pentru momente dulci.
-        </p>
+        <p class="text-muted small">Pasiune, ingrediente premium și deserturi făcute fără compromisuri în inima Clujului.</p>
       </div>
-      <div class="col-md-4 text-center">
-        <ul class="list-inline mb-0">
-          <li class="list-inline-item mx-3"><a href="#menu"
-              class="text-secondary text-decoration-none small">Produse</a></li>
-          <li class="list-inline-item mx-3"><a href="#about"
-              class="text-secondary text-decoration-none small">Evenimente</a></li>
-          <li class="list-inline-item mx-3"><a href="#contact"
-              class="text-secondary text-decoration-none small">Contact</a></li>
-        </ul>
+
+
+
+      <div class="col-md-6 text-center text-md-end">
+        <p class="mb-0 text-muted small">&copy; 2026 Eat Cake Cluj.</p>
+        <p class="text-muted small mb-0">Creat cu <i class="bi bi-heart-fill text-primary"></i> pentru momente dulci.</p>
       </div>
-      <div class="col-md-4 text-center text-md-end">
-        <div class="d-flex justify-content-center justify-content-md-end gap-3">
-          <a href="#" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="text-white fs-5"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="text-white fs-5"><i class="bi bi-tiktok"></i></a>
-        </div>
-      </div>
+
     </div>
-    <hr class="my-4 border-secondary opacity-25">
-    <div class="row pt-2">
-      <div class="col-12 text-center">
-        <p class="text-secondary mb-0" style="font-size: 0.75rem;">
-          &copy; 2026 Eat Cake Cluj. Toate drepturile rezervate. <br class="d-md-none">
-          Creat cu <span class="text-primary">♥</span> în Cluj-Napoca.
-        </p>
-      </div>
-    </div>
+    
+    <hr class="mt-4 mb-0 opacity-10">
   </div>
 </footer>
 
 
+
+
+
+
+
+<!--MODAL PRODUSE---------------------------------------------------------------------------------------------->
+<div class="modal fade" id="modalProduse" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable"> <div class="modal-content border-0" style="border-radius: 20px;">
+      
+      <div class="modal-header border-0 bg-secondary" style="border-radius: 20px 20px 0 0;">
+        <h5 class="modal-title fw-bold text-primary" id="modalProduseLabel">Meniu Complet Eat Cake</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body p-0">
+        <div class="list-group list-group-flush">
+          
+          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
+            <div class="flex-shrink-0">
+              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
+            </div>
+            <div class="flex-grow-1 ms-3 ms-md-4">
+              <div class="d-flex justify-content-between align-items-start mb-1">
+                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
+                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
+              </div>
+              <p class="text-muted mb-0 small-md">
+                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
+              </p>
+            </div>
+          </div>
+
+          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
+            <div class="flex-shrink-0">
+              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
+            </div>
+            <div class="flex-grow-1 ms-3 ms-md-4">
+              <div class="d-flex justify-content-between align-items-start mb-1">
+                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
+                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
+              </div>
+              <p class="text-muted mb-0 small-md">
+                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
+              </p>
+            </div>
+          </div>
+
+          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
+            <div class="flex-shrink-0">
+              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
+            </div>
+            <div class="flex-grow-1 ms-3 ms-md-4">
+              <div class="d-flex justify-content-between align-items-start mb-1">
+                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
+                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
+              </div>
+              <p class="text-muted mb-0 small-md">
+                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
+              </p>
+            </div>
+          </div>
+
+          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
+            <div class="flex-shrink-0">
+              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
+            </div>
+            <div class="flex-grow-1 ms-3 ms-md-4">
+              <div class="d-flex justify-content-between align-items-start mb-1">
+                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
+                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
+              </div>
+              <p class="text-muted mb-0 small-md">
+                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
+              </p>
+            </div>
+          </div>
+
+          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
+            <div class="flex-shrink-0">
+              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
+            </div>
+            <div class="flex-grow-1 ms-3 ms-md-4">
+              <div class="d-flex justify-content-between align-items-start mb-1">
+                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
+                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
+              </div>
+              <p class="text-muted mb-0 small-md">
+                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
+              </p>
+            </div>
+          </div>
+
+          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
+            <div class="flex-shrink-0">
+              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
+            </div>
+            <div class="flex-grow-1 ms-3 ms-md-4">
+              <div class="d-flex justify-content-between align-items-start mb-1">
+                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
+                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
+              </div>
+              <p class="text-muted mb-0 small-md">
+                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
+              </p>
+            </div>
+          </div>          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
+            <div class="flex-shrink-0">
+              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
+            </div>
+            <div class="flex-grow-1 ms-3 ms-md-4">
+              <div class="d-flex justify-content-between align-items-start mb-1">
+                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
+                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
+              </div>
+              <p class="text-muted mb-0 small-md">
+                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
+              </p>
+            </div>
+          </div>
+
+          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
+            <div class="flex-shrink-0">
+              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
+            </div>
+            <div class="flex-grow-1 ms-3 ms-md-4">
+              <div class="d-flex justify-content-between align-items-start mb-1">
+                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
+                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
+              </div>
+              <p class="text-muted mb-0 small-md">
+                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
+              </p>
+            </div>
+          </div>
+
+          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
+            <div class="flex-shrink-0">
+              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
+            </div>
+            <div class="flex-grow-1 ms-3 ms-md-4">
+              <div class="d-flex justify-content-between align-items-start mb-1">
+                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
+                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
+              </div>
+              <p class="text-muted mb-0 small-md">
+                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
+              </p>
+            </div>
+          </div>          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
+            <div class="flex-shrink-0">
+              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
+            </div>
+            <div class="flex-grow-1 ms-3 ms-md-4">
+              <div class="d-flex justify-content-between align-items-start mb-1">
+                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
+                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
+              </div>
+              <p class="text-muted mb-0 small-md">
+                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
+              </p>
+            </div>
+          </div>
+
+          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
+            <div class="flex-shrink-0">
+              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
+            </div>
+            <div class="flex-grow-1 ms-3 ms-md-4">
+              <div class="d-flex justify-content-between align-items-start mb-1">
+                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
+                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
+              </div>
+              <p class="text-muted mb-0 small-md">
+                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
+              </p>
+            </div>
+          </div>
+
+          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
+            <div class="flex-shrink-0">
+              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
+            </div>
+            <div class="flex-grow-1 ms-3 ms-md-4">
+              <div class="d-flex justify-content-between align-items-start mb-1">
+                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
+                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
+              </div>
+              <p class="text-muted mb-0 small-md">
+                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
+              </p>
+            </div>
+          </div>
+
+          </div> </div> <div class="modal-footer border-0">
+        <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Închide</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--MODAL IMG OFERTA---------------------------------------------------------------------------------------------->
+<div class="modal fade" id="modalImagine" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered"> <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Pachete de Sarbatori</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row g-3"> <div class="col-12 ">
+              <img src="./assets/img/of1.jpg" class="img-fluid rounded shadow-sm" alt="Pachet 1">
+            </div>
+
+            <div class="col-12 ">
+              <img src="./assets/img/of2.jpg" class="img-fluid rounded shadow-sm" alt="Pachet 2">
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Închide</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!--JS---------------------------------------------------------------------------------------------->
 <!--JS---------------------------------------------------------------------------------------------->
@@ -336,6 +656,7 @@
 <!--BOOSTRAP---------------------------------------------------------------------------------------------->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+<!--CLOSE HAMBURGER MENU---------------------------------------------------------------------------------------------->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.getElementById('navbarNav');
@@ -360,8 +681,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
-
-
 
 </body>
 </html>

@@ -1,0 +1,62 @@
+.menu-img-large {
+  // Dimensiuni generoase pe mobil
+  width: 90px; 
+  height: 90px;
+  object-fit: cover;
+  object-position: center;
+  display: block; // Previne spațiile albe sub imagine
+  
+  // GARANTEAZĂ că imaginea rămâne la 90px indiferent de textul de lângă
+  flex: 0 0 90px; 
+
+  @media (min-width: 768px) {
+    width: 130px;
+    height: 130px;
+    // Forțează lățimea pe desktop
+    flex: 0 0 130px;
+  }
+}
+
+.menu-item {
+transition: background-color 0.2s ease;
+
+  &:hover {
+background-color: rgba($secondary, 0.03); 
+
+    .menu-img-large {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  // Ajustări font pentru a echilibra imaginea mare
+  h5 {
+    line-height: 1.2;
+  }
+
+  .small-md {
+    font-size: 0.85rem;
+    @media (min-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Controlul scroll-ului pentru listă lungă
+.modal-body {
+  max-height: 50vh;
+  overflow-y: auto;
+  
+  // Design scrollbar pentru Chrome/Safari
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $secondary;
+    border-radius: 10px;
+  }
+}
+

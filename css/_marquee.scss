@@ -1,0 +1,48 @@
+.marquee-section {
+  background-color: rgba($myAll, 0.3); // Un fundal discret
+}
+
+.marquee-container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+  padding: 1rem 1rem;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 10px; // Spațiul dintre imagini
+  animation: scroll-marquee 30s linear infinite; // Viteza (20s)
+
+  img {
+    width: 300px; // Lățimea fiecărei imagini
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+
+    @media (max-width: 576px) {
+      width: 130px;
+      height: 110px;
+    }
+  }
+
+  // PAUZA LA HOVER (Mouse) ȘI ACTIVE (Deget pe mobil)
+  &:hover, &:active {
+    animation-play-state: paused;
+    
+
+  }
+}
+
+// DEFINIREA ANIMAȚIEI
+@keyframes scroll-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 10px)); // Se mută exact jumătate din lățimea totală
+  }
+}

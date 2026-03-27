@@ -1,0 +1,57 @@
+.cake-card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  .card-img-top {
+    transition: transform 0.5s ease;
+    height: 250px; // Înălțimea pe desktop
+    object-fit: cover;
+
+    @media (max-width: 576px) {
+      height: 140px; // Înălțime mai mică pe mobil pentru a păstra proporția
+    }
+  }
+
+  .card-body {
+    padding: 1rem;
+    
+    @media (max-width: 576px) {
+      padding: 0.5rem; // Padding mai mic pe mobil să nu înghesuie textul
+      
+      h5 { font-size: 0.8rem; } // Titlu mai mic pe mobil
+      p { font-size: 0.8rem; } // Descriere mai mică
+      .fs-4 { font-size: 0.8rem !important; } // Preț redimensionat
+    }
+  }
+}
+
+.myBtn2 {
+  @media (max-width: 576px) {
+    font-size: 0.9rem; // Ajustează până când textul încape perfect
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    min-width: 200px; /* Adjust this number until it looks perfect */
+    max-width: 350px;
+  }
+
+    @media (min-width: 577px) {
+
+    min-width: 400px; /* Adjust this number until it looks perfect */
+  }
+}
+
+
+
+

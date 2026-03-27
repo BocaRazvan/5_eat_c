@@ -1,6 +1,6 @@
 /* --- NAVBAR CONTAINER --- */
 .navbar {
-  background-color: #98FF98; // Your Mint color
+  background-color: $myAccent; // Your Mint color
   box-shadow: 0 4px 6px rgba(0,0,0,0.175);
   border-bottom: 1px solid $secondary;
 }
@@ -75,8 +75,8 @@
 
 /* --- CUSTOM UTILITY --- */
 .nav-extra-squeeze {
-  padding-left: 20% !important;
-  padding-right: 19% !important;
+  padding-left: 10% !important;
+  padding-right: 10% !important;
 
   @media (max-width: 992px) {
     padding-left: 5% !important; // Fixed: was 20% on mobile, which is too much!
@@ -86,20 +86,18 @@
 
 .navbar-nav {
   @media (min-width: 992px) {
-    .nav-item:not(:last-child) {
-      position: relative;
-      display: flex;
-      align-items: center;
+.nav-item:not(:last-child) {
+display: flex;
+align-items: center;
 
       // The Vertical Separator
       &::after {
-        content: "";
-        display: inline-block;
-        width: 2px;      // Thickness of the line
-        height: 30px;    // Height of the line
-        background-color: rgba($primary, 0.3); // Faded Chocolate
-        margin-left: 1.5rem; // Space after the link before the line
-        margin-right: -0.5rem; // Adjusts the gap for the next link
+      content: "";
+      width: 1px; // Thinner is usually classier
+      height: 20px; 
+      background-color: rgba($primary, 0.2);
+      margin-left: 1.5rem; // Controls the gap between link and line
+      // Remove margin-right from here
       }
     }
   }
@@ -115,15 +113,36 @@
     }
     
     .nav-link {
-      text-align: center; // Keeps it clean on mobile
-      font-size: 1.1rem;   // Makes links easier to tap on a phone
+      text-align: left; // Changed from center to left
+      padding-left: 1rem; // Adds a nice "breathable" gap from the left edge
+      font-size: 1.5rem;   // Makes links easier to tap on a phone
+      display: flex; // This ensures the icon and text stay on one line
+      align-items: center;
     }
   }
 }
 
 @media (max-width: 991.98px) {
   .navbar-collapse {
-    padding-top: 1.3rem ; // Gives the links "room to breathe" when the menu opens
-   padding-bottom: 1.3rem ; 
+
+   position: absolute; 
+    top: 100%; // Starts right at the bottom of the visible navbar
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #98FF98; // Matches your Mint navbar
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    padding: 1rem 10%; // Matches your "Squeeze"
+    border-bottom: 2px solid $secondary;
   }
+}
+
+.nav-link i {
+  display: inline-block; // <--- CRITICAL: Allows the icon to rotate/scale
+  color: $secondary; // Make the icons Caramel
+  transition: transform 0.2s ease;
+}
+
+.nav-link:hover i {
+  transform: rotate(15deg) scale(1.1); // A little "wiggle" on hover
 }

@@ -1,0 +1,185 @@
+/* ==========================================================================
+   EVENIMENTE (About/Events Section)
+   ========================================================================== */
+
+// 1. General Event Section Styles
+.events-section {
+  .lead span {
+    background-color: lighten($myAccent, 5%); // The soft frosting pink tint
+    padding: 0 5px;
+    border-radius: 4px;
+  }
+} 
+
+// 2. Custom Event List (Flex Container)
+.event-list {
+  display: flex;
+  flex-wrap: wrap; // Allows items to drop to next line on mobile
+  gap: 1.5rem; // Controls spacing between items
+
+  .event-item {
+    flex: 1 1 calc(50% - 1.5rem); // Two items per row on tablet/mobile (adjusting for gap)
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem; // Spacing between icon and text
+    
+    // Make items full width on small mobile
+    @media (max-width: 576px) {
+      flex: 1 1 100%;
+    }
+
+    // Large icon style
+    i {
+      font-size: 1.8rem;
+      background-color: lighten($primary, 45%); // Very light berry background
+      color: $primary;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      margin-top: 3px; // Align icon vertically with text
+    }
+
+    // List item title and description
+    div {
+      h5 {
+        font-weight: 700;
+        margin-bottom: 0.2rem;
+        font-size: 1.1rem;
+        color: $primary;
+      }
+      p {
+        font-size: 0.95rem;
+        color: #777;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// 3. Split Image Effect (The depth/overlap technique)
+.event-images-wrapper {
+  // Container must be relative for absolute positioning of children
+
+  // Main background image (e.g., Wedding Cake)
+  .main-event-img {
+    position: relative;
+    z-index: 1;
+    transform: rotate(1deg); // Slight rotation for bespoke feel
+    transition: all 0.5s ease;
+  }
+
+  // Smaller floating image (e.g., Candy Bar)
+  .secondary-event-img-container {
+    position: absolute;
+    bottom: -15%; // Adjust for desired overlap
+    right: 0%;    // Adjust for desired overlap
+    width: 80%;   // Adjust size relative to parent
+    z-index: 2;   // Places it in front of the main image
+    transform: rotate(-3deg); // Opposite slight rotation
+    transition: all 0.5s ease;
+    
+    img {
+      display: block; // Removes whitespace under image
+    }
+  }
+
+  // Hover Effect: Interactive depth on the whole container
+  &:hover {
+    .main-event-img {
+      transform: rotate(0deg) scale(1.02); // Image slightly expands and flattens
+    }
+    .secondary-event-img-container {
+      transform: rotate(0deg) translate(-10px, -10px); // Secondary moves slightly
+    }
+  }
+
+
+
+} 
+
+@media (max-width: 991px) {
+  .event-images-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: static !important; // Removes the relative constraint if needed
+  }
+
+  .main-event-img {
+    transform: none !important;
+    width: 100% !important;
+  }
+
+  .secondary-event-img-container {
+    /* CRITICAL: This pulls the image out of "floating" mode and into the stack */
+    position: relative !important; 
+    
+    top: auto !important;
+    bottom: auto !important;
+    right: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    transform: none !important;
+    margin-top: 0 !important; // Removes that mt-5 from your HTML if it's too much
+    
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+/* ==========================================================================
+   SERVICES INCLUDED SECTION ( Ce include experiența Eat Cake? )
+   ========================================================================== */
+
+// 1. Service Cards (Design & Hover)
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.02);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+  }
+
+  // Large Primary Icon Box
+  .icon-box-primary {
+    width: 90px;
+    height: 90px;
+    background: $primary;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba($primary, 0.3);
+  }
+
+  h5 {
+    color: $primary;
+  }
+}
+
+// 2. Delivery Highlight Box (Highlighted Box for the important info)
+.delivery-highlight-box {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+  border-left: 5px solid $secondary; // Adds color highlight on the side
+
+  i {
+    background-color: rgba($secondary, 0.1);
+    color: $secondary;
+    padding: 15px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

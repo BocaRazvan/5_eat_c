@@ -1,0 +1,108 @@
+/* ==========================================================================
+   CONTACT SECTION
+   ========================================================================== */
+
+.contact-section {
+
+  .icon-circle {
+    width: 45px;
+    height: 45px;
+    background-color: rgba($primary, 0.1);
+    color: $primary;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+  }
+
+  .contact-info-list div:hover .icon-circle {
+    background-color: $primary;
+    color: white;
+    transform: scale(1.1);
+  }
+
+  .contact-card {
+    border: 1px solid rgba($primary, 0.05);
+  }
+
+  // Social Buttons
+  .social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    
+    &.facebook { background-color: #1877f2; }
+    &.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); }
+    &.whatsapp { background-color: #25d366; }
+
+    &:hover {
+      transform: translateY(-5px);
+      filter: brightness(1.1);
+      color: white;
+    }
+  }
+
+  // Custom Form Inputs
+  .custom-input {
+    border: 2px solid transparent;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 12px 20px;
+    
+    &:focus {
+      background-color: white;
+      border-color: rgba($primary, 0.3);
+      box-shadow: 0 5px 15px rgba($primary, 0.1);
+    }
+  }
+}
+
+// Mobile specific tweaks
+@media (max-width: 991px) {
+  .contact-section {
+    text-align: center;
+    
+    .icon-circle {
+      margin: 0 auto 10px auto;
+    }
+    
+    .d-flex {
+      flex-direction: column;
+      align-items: center !important;
+    }
+    
+    .contact-card {
+      padding: 30px 20px !important;
+    }
+  }
+}
+
+// Mobile specific override
+@media (max-width: 991px) {
+  .contact-section {
+    /* While the text and info boxes stack vertically... */
+    display: flex;
+    flex-direction: column;
+
+    /* ...we force the social buttons to remain horizontal */
+    .contact-card-simple .d-flex {
+      flex-direction: row !important;
+      margin-top: 20px;
+    }
+    
+    .social-btn {
+      width: 50px;  // Slightly smaller for mobile if needed
+      height: 50px;
+      font-size: 1.3rem;
+    }
+  }
+}
