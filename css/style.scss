@@ -2,8 +2,8 @@
 @import "../node_modules/bootstrap/scss/functions";
 
 // 2. YOUR VARIABLES
-$primary: #3d2c22;
-$secondary: #ab5f90;
+$primary: #6b3d3b;
+$secondary: #ba4a69;
 $success: #09bb09;
 $info: #1cdfa8;
 $warning: #400b49;
@@ -12,6 +12,16 @@ $danger: #ff0000;
 
 $myAll: #B6B6B4;
 $myAccent: #98FF98; 
+
+// FONTS
+
+// Definirea variabilelor de font
+$font-family-serif: 'Playfair Display', serif;
+$font-family-sans-serif: 'Montserrat', sans-serif;
+
+// Aplicarea lor în Bootstrap
+$font-family-base: $font-family-sans-serif; // Pentru tot textul de bază
+$headings-font-family: $font-family-serif;  // Doar pentru h1, h2, h3... 
 
 
 // 3. BOOTSTRAP CORE VARIABLES (Required for maps)
@@ -36,11 +46,12 @@ $theme-colors: map-merge($theme-colors, (
 // 5. THE REST OF BOOTSTRAP
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-
+// Background
 .bg-myAll {
     background-color: $myAll !important;
 }
 
+// Background
 body {
     background-color: $myAll;
     overflow-x: hidden; // This prevents the side-menu from creating a scrollbar
@@ -65,12 +76,13 @@ html, body {
 @import "./contact"; 
 @import "./footer";
 
-
+// CTA BUTTON
 .myBtn2 {
   background-color: $myAccent;
   border-color: $myAccent;
   transition: all 0.3s ease; // Esențial pentru o mișcare fluidă, nu bruscă
-  color: $primary;
+  color: $primary; 
+
 
   &:hover {
     background-color: darken($myAccent, 10%); // O face cu 10% mai închisă
@@ -81,3 +93,64 @@ html, body {
    
   }
 }
+
+// HEADINGS
+.myHeadings {
+  /* 1. The Two-Tone Gradient Text */
+  background: linear-gradient(45deg, #ba4a69, #6b3d3b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* Fallback for older browsers */
+  
+  /* 2. Setup for the Highlight */
+  position: relative;
+  display: inline-block;
+  z-index: 1; /* Keeps the text clearly in front */
+  padding: 0 5px; /* Gives the highlight a little breathing room on the edges */
+}
+
+/* 3. The Sweet Highlight (Marker Effect) placed behind the text */
+.myHeadings::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 10%; /* Lifts the highlight slightly off the very bottom */
+  width: 100%;
+  height: 35%; /* Controls how thick the marker line is */
+  background-color: #ba4a69; /* Your Berry Pink */
+  opacity: 0.15; /* Makes it softly transparent like a real highlighter */
+  z-index: -1; /* Tucks it neatly behind the letters */
+  border-radius: 3px; /* Softens the edges of the highlight */
+}
+
+
+// BUTTON BACK TO TOP
+#btn-back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none; // Hidden until user scrolls
+  z-index: 1050; // Above everything else
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    background-color: $primary; // Changes to chocolate on hover
+    border-color: $primary;
+  }
+}
+
+::selection {
+  background: $secondary;
+  color: white;
+}
+
+$headings-letter-spacing: 0.05rem; // Ajustează valoarea după gust (0.02 - 0.1)
