@@ -68,63 +68,9 @@
     <div class="text-start mb-4">
       <h2 class="display-5 fw-bold text-primary myHeadings pt-3">Prăjiturile casei</h2>
     </div>
-    <div class="row g-4 mt-3">
+    <div class="row g-4 mt-3" id="produse-principale">
 
-      <div class="col-6 col-lg-3">
-        <div class="card h-100 cake-card">
-          <div class="overflow-hidden">
-            <img src="./assets/img/felie1.jpg" class="card-img-top" alt="Tort de Ciocolată">
-          </div>
-          <div class="card-body text-center d-flex flex-column">
-            <h5 class="card-title fw-bold mb-2 text-primary">Tort Signature Chocolate</h5>
-            <p class="card-text text-muted mb-3 d-none d-md-block">Mousse de ciocolată belgiană, blat umed și inserție
-              de zmeură.</p>
-            <p class="fs-4 fw-bold text-secondary mt-auto mb-0">150 RON</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-6 col-lg-3">
-        <div class="card h-100 cake-card">
-          <div class="overflow-hidden">
-            <img src="./assets/img/felie1.jpg" class="card-img-top" alt="Tort de Ciocolată">
-          </div>
-          <div class="card-body text-center d-flex flex-column">
-            <h5 class="card-title fw-bold mb-2 text-primary">Tort Signature Chocolate</h5>
-            <p class="card-text text-muted mb-3 d-none d-md-block">Mousse de ciocolată belgiană, blat umed și inserție
-              de zmeură.</p>
-            <p class="fs-4 fw-bold text-secondary mt-auto mb-0">150 RON</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-6 col-lg-3">
-        <div class="card h-100 cake-card">
-          <div class="overflow-hidden">
-            <img src="./assets/img/felie1.jpg" class="card-img-top" alt="Tort de Ciocolată">
-          </div>
-          <div class="card-body text-center d-flex flex-column">
-            <h5 class="card-title fw-bold mb-2 text-primary">Tort Signature Chocolate</h5>
-            <p class="card-text text-muted mb-3 d-none d-md-block">Mousse de ciocolată belgiană, blat umed și inserție
-              de zmeură.</p>
-            <p class="fs-4 fw-bold text-secondary mt-auto mb-0">150 RON</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-6 col-lg-3">
-        <div class="card h-100 cake-card">
-          <div class="overflow-hidden">
-            <img src="./assets/img/felie1.jpg" class="card-img-top" alt="Tort de Ciocolată">
-          </div>
-          <div class="card-body text-center d-flex flex-column">
-            <h5 class="card-title fw-bold mb-2 text-primary">Tort Signature Chocolate</h5>
-            <p class="card-text text-muted mb-3 d-none d-md-block">Mousse de ciocolată belgiană, blat umed și inserție
-              de zmeură.</p>
-            <p class="fs-4 fw-bold text-secondary mt-auto mb-0">150 RON</p>
-          </div>
-        </div>
-      </div>
+     
 
     </div>
   </div>
@@ -147,21 +93,10 @@
 </div>
 
 <section class="marquee-section overflow-hidden mt-2">
+  
   <div class="container marquee-container">
-    <div class="marquee-content">
-      <img src="./assets/img/tort1.jpg" alt="Cake 1">
-      <img src="./assets/img/tort2.jpg" alt="Cake 2">
-      <img src="./assets/img/tort1.jpg" alt="Cake 3">
-      <img src="./assets/img/tort2.jpg" alt="Cake 4">
-      <img src="./assets/img/tort1.jpg" alt="Cake 5">
-      <img src="./assets/img/tort2.jpg" alt="Cake 6">
-    
-      <img src="./assets/img/tort1.jpg" alt="Cake 1">
-      <img src="./assets/img/tort2.jpg" alt="Cake 2">
-      <img src="./assets/img/tort1.jpg" alt="Cake 3">
-      <img src="./assets/img/tort2.jpg" alt="Cake 4">
-      <img src="./assets/img/tort1.jpg" alt="Cake 5">
-      <img src="./assets/img/tort2.jpg" alt="Cake 6">
+    <div class="marquee-content" id="marquee-dynamic">
+
     </div>
   </div>
 
@@ -226,16 +161,15 @@
         
 
       </div>
-      
+          
       <div class="col-12 col-lg-5 position-relative event-images-wrapper mb-5">
-        <img src="./assets/img/masa1.jpg" alt="Wedding Cake Setup Cluj" class="img-fluid rounded-4 main-event-img shadow-lg">
-        
+        <img id="event-img-main" src="" alt="Wedding Cake Setup Cluj" class="img-fluid rounded-4 main-event-img shadow-lg"
+          loading="lazy">
         <div class="secondary-event-img-container shadow-lg mt-5">
-          <img src="./assets/img/masa1.jpg" alt="Eat Cake Candy Bar" class="img-fluid rounded-4">
+          <img id="event-img-secondary" src="" alt="Eat Cake Candy Bar" class="img-fluid rounded-4" loading="lazy">
         </div>
       </div>
-      
-    </div>
+    
   </div>
 </section>
 
@@ -434,183 +368,11 @@
       </div>
 
       <div class="modal-body p-0">
-        <div class="list-group list-group-flush">
+        <div class="list-group list-group-flush" id="produse-modal">
           
-          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
-            <div class="flex-shrink-0">
-              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
-            </div>
-            <div class="flex-grow-1 ms-3 ms-md-4">
-              <div class="d-flex justify-content-between align-items-start mb-1">
-                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
-                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
-              </div>
-              <p class="text-muted mb-0 small-md">
-                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
-              </p>
-            </div>
-          </div>
+<!--MODAL PLACE BEFORE JS---------------------------------------------------------------------------------------------->
+<!--MODAL PLACE BEFORE JS---------------------------------------------------------------------------------------------->
 
-          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
-            <div class="flex-shrink-0">
-              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
-            </div>
-            <div class="flex-grow-1 ms-3 ms-md-4">
-              <div class="d-flex justify-content-between align-items-start mb-1">
-                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
-                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
-              </div>
-              <p class="text-muted mb-0 small-md">
-                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
-              </p>
-            </div>
-          </div>
-
-          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
-            <div class="flex-shrink-0">
-              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
-            </div>
-            <div class="flex-grow-1 ms-3 ms-md-4">
-              <div class="d-flex justify-content-between align-items-start mb-1">
-                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
-                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
-              </div>
-              <p class="text-muted mb-0 small-md">
-                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
-              </p>
-            </div>
-          </div>
-
-          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
-            <div class="flex-shrink-0">
-              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
-            </div>
-            <div class="flex-grow-1 ms-3 ms-md-4">
-              <div class="d-flex justify-content-between align-items-start mb-1">
-                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
-                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
-              </div>
-              <p class="text-muted mb-0 small-md">
-                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
-              </p>
-            </div>
-          </div>
-
-          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
-            <div class="flex-shrink-0">
-              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
-            </div>
-            <div class="flex-grow-1 ms-3 ms-md-4">
-              <div class="d-flex justify-content-between align-items-start mb-1">
-                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
-                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
-              </div>
-              <p class="text-muted mb-0 small-md">
-                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
-              </p>
-            </div>
-          </div>
-
-          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
-            <div class="flex-shrink-0">
-              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
-            </div>
-            <div class="flex-grow-1 ms-3 ms-md-4">
-              <div class="d-flex justify-content-between align-items-start mb-1">
-                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
-                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
-              </div>
-              <p class="text-muted mb-0 small-md">
-                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
-              </p>
-            </div>
-          </div>          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
-            <div class="flex-shrink-0">
-              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
-            </div>
-            <div class="flex-grow-1 ms-3 ms-md-4">
-              <div class="d-flex justify-content-between align-items-start mb-1">
-                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
-                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
-              </div>
-              <p class="text-muted mb-0 small-md">
-                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
-              </p>
-            </div>
-          </div>
-
-          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
-            <div class="flex-shrink-0">
-              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
-            </div>
-            <div class="flex-grow-1 ms-3 ms-md-4">
-              <div class="d-flex justify-content-between align-items-start mb-1">
-                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
-                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
-              </div>
-              <p class="text-muted mb-0 small-md">
-                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
-              </p>
-            </div>
-          </div>
-
-          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
-            <div class="flex-shrink-0">
-              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
-            </div>
-            <div class="flex-grow-1 ms-3 ms-md-4">
-              <div class="d-flex justify-content-between align-items-start mb-1">
-                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
-                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
-              </div>
-              <p class="text-muted mb-0 small-md">
-                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
-              </p>
-            </div>
-          </div>          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
-            <div class="flex-shrink-0">
-              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
-            </div>
-            <div class="flex-grow-1 ms-3 ms-md-4">
-              <div class="d-flex justify-content-between align-items-start mb-1">
-                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
-                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
-              </div>
-              <p class="text-muted mb-0 small-md">
-                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
-              </p>
-            </div>
-          </div>
-
-          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
-            <div class="flex-shrink-0">
-              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
-            </div>
-            <div class="flex-grow-1 ms-3 ms-md-4">
-              <div class="d-flex justify-content-between align-items-start mb-1">
-                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
-                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
-              </div>
-              <p class="text-muted mb-0 small-md">
-                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
-              </p>
-            </div>
-          </div>
-
-          <div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"> 
-            <div class="flex-shrink-0">
-              <img src="./assets/img/felie1.jpg" class="rounded-3 menu-img-large" alt="Tort">
-            </div>
-            <div class="flex-grow-1 ms-3 ms-md-4">
-              <div class="d-flex justify-content-between align-items-start mb-1">
-                <h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">Tort Signature Chocolate</h5>
-                <span class="fw-bold text-secondary text-nowrap ms-2 fs-5">150 RON</span>
-              </div>
-              <p class="text-muted mb-0 small-md">
-                Mousse bogat de ciocolată belgiană 70%, blat umed de cacao și o inserție proaspătă de zmeură din producție locală.
-              </p>
-            </div>
-          </div>
 
           </div> </div> <div class="modal-footer border-0">
         <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Închide</button>
@@ -731,6 +493,83 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+</script>
+
+<!--CONTROL ADI---------------------------------------------------------------------------------------------->
+<script>
+const SHEET_ID = '1JQUtPZd1VopV7otZjz1VCsTFtmlV5tkBM0QwLwzSheo';
+const SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json`;
+
+async function loadSiteData() {
+    try {
+        const response = await fetch(SHEET_URL);
+        const text = await response.text();
+        const data = JSON.parse(text.substr(47).slice(0, -2));
+        const rows = data.table.rows;
+
+        const containerPrincipal = document.getElementById('produse-principale');
+        const containerModal = document.getElementById('produse-modal');
+        const containerMarquee = document.getElementById('marquee-dynamic');
+
+        if(containerPrincipal) containerPrincipal.innerHTML = '';
+        if(containerModal) containerModal.innerHTML = '';
+        if(containerMarquee) containerMarquee.innerHTML = '';
+
+        rows.forEach((row) => {
+            const getVal = (colIndex) => {
+                if (!row.c || !row.c[colIndex]) return '';
+                const val = row.c[colIndex].v !== null ? row.c[colIndex].v : (row.c[colIndex].f || '');
+                return val.toString().trim();
+            };
+
+            const sectiune = getVal(0).toLowerCase();
+            const idCol = getVal(1).replace(/\s/g, ''); // Eliminăm orice spațiu din ID
+            const nume = getVal(2);
+            const desc = getVal(3);
+            const pret = getVal(4);
+            const img = getVal(5);
+
+            // 1. HERO
+            if (sectiune === 'hero' && img) {
+                const heroElement = document.querySelector('.hero');
+                if (heroElement) heroElement.style.backgroundImage = `linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 30%), url('${img}')`;
+            }
+
+            // 2. PRODUSE PRINCIPALE
+            if (sectiune === 'principal' && img && containerPrincipal) {
+                containerPrincipal.innerHTML += `<div class="col-6 col-lg-3"><div class="card h-100 cake-card"><div class="overflow-hidden"><img src="${img}" class="card-img-top" alt="${nume}" loading="lazy"></div><div class="card-body text-center d-flex flex-column"><h5 class="card-title fw-bold mb-2 text-primary">${nume}</h5><p class="card-text text-muted mb-3 d-none d-md-block">${desc}</p><p class="fs-4 fw-bold text-secondary mt-auto mb-0">${pret} RON</p></div></div></div>`;
+            }
+
+            // 3. MODAL
+            if (sectiune === 'modal' && img && containerModal) {
+                containerModal.innerHTML += `<div class="menu-item d-flex align-items-center p-3 p-md-4 border-bottom"><div class="flex-shrink-0"><img src="${img}" class="rounded-3 menu-img-large" alt="${nume}" loading="lazy"></div><div class="flex-grow-1 ms-3 ms-md-4"><div class="d-flex justify-content-between align-items-start mb-1"><h5 class="fw-bold mb-0 text-primary fs-5 fs-md-4">${nume}</h5><span class="fw-bold text-secondary text-nowrap ms-2 fs-5">${pret} RON</span></div><p class="text-muted mb-0 small-md">${desc}</p></div></div>`;
+            }
+
+            // 4. MARQUEE
+            if (sectiune === 'marquee' && img && containerMarquee) {
+                containerMarquee.innerHTML += `<img src="${img}" alt="Galerie Eat Cake" loading="lazy">`;
+            }
+
+            // 5. EVENIMENTE (Cu codurile 111 și 222)
+            if (sectiune.includes('eveniment') && img) {
+                if (idCol === '111') {
+                    const el = document.getElementById('event-img-main');
+                    if (el) el.src = img;
+                } else if (idCol === '222') {
+                    const el = document.getElementById('event-img-secondary');
+                    if (el) el.src = img;
+                }
+            }
+        });
+
+        if (containerMarquee && containerMarquee.innerHTML !== '') {
+            containerMarquee.innerHTML += containerMarquee.innerHTML;
+        }
+
+    } catch (e) { console.error("Eroare:", e); }
+}
+
+loadSiteData();
 </script>
 
 </body>

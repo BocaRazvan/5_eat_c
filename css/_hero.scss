@@ -5,7 +5,7 @@
   
   // Use 'background' shorthand to keep the gradient and image together safely
   background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 30%), 
-              url('../assets/img/hero.jpg') center/cover no-repeat;
+               center/cover no-repeat;
 
   .container {
     // This works perfectly with align-items-end
