@@ -340,21 +340,38 @@
 
 <!--FOOTER---------------------------------------------------------------------------------------------->
 
-<footer class="footer py-5 mt-5">
+<footer class="footer py-4 mt-5 px-3">
   <div class="container">
-    <div class="row gy-4 align-items-center">
-      <div class="col-md-6 text-center text-md-start">
-        <a class="navbar-brand d-inline-block mb-3" href="#">
-          <img src="./assets/img/logo-1-1.png" alt="Eat Cake" style="height: 60px;">
-        </a>
-        <p class="text-muted small">Pasiune, ingrediente premium și deserturi făcute fără compromisuri în inima Clujului.</p>
+    <div class="row">
+      <div class="col-12 text-center mt-3">
+        <div class="legal-info small">
+          <span class="d-block d-md-inline mb-2 mb-md-0 text-black fw-bold">EAT CAKE SRL</span>
+          <span class="d-none d-md-inline"> | </span>
+          <span class="d-block d-md-inline mb-2 mb-md-0 text-black">CUI: RO47430128</span>
+          <span class="d-none d-md-inline"> | </span>
+          <span class="d-block d-md-inline mb-2 mb-md-0 text-black">Reg. Com: J2023000084126</span>
+          <br class="d-none d-md-block">
+          <span class="text-black d-block mt-1">Adresă: Str. Stejarului 40, Sc. 1, Et. 1, Ap. 17, Cod 407280</span>
+          
+          <div class="legal-links mt-3">
+            <a href="politica-cookies.html" class="text-black text-decoration-underline mx-2">Politica Cookies</a>
+            <span class="text-black">|</span>
+            <a href="termeni-conditii.html" class="text-black text-decoration-underline mx-2">Termeni și Condiții</a> |
+                        <a href="alergeni.pdf" class="text-black text-decoration-underline mx-2">Alergeni și Nutriție</a>
+
+          </div>
+        </div>
       </div>
-      <div class="col-md-6 text-center text-md-end">
-        <p class="mb-0 text-muted small">&copy; 2026 Eat Cake Cluj.</p>
-        <p class="text-muted small mb-0">Creat cu <i class="bi bi-heart-fill text-primary"></i> pentru momente dulci.</p>
+
+      <div class="col-12 d-flex flex-wrap justify-content-center gap-3 mt-4">
+        <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="nofollow">
+          <img src="./assets/anpc.jpg" alt="SAL" style="height: 40px;" class="rounded shadow-sm border border-dark">
+        </a>
+        <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO" target="_blank" rel="nofollow">
+          <img src="./assets/sol.jpg" alt="SOL" style="height: 40px;" class="rounded shadow-sm border border-dark">
+        </a>
       </div>
     </div>
-    <hr class="mt-4 mb-0 opacity-10">
   </div>
 </footer>
 
@@ -585,6 +602,30 @@ async function loadSiteData() {
 }
 
 loadSiteData();
+</script>
+
+<!--COOKIES---------------------------------------------------------------------------------------------->
+<div id="cookie-banner" class="fixed-bottom bg-dark text-white p-3 shadow-lg" style="display: none; z-index: 9999;">
+  <div class="container d-md-flex align-items-center justify-content-between">
+    <p class="mb-md-0 small">
+      Acest site folosește cookies pentru a-ți oferi cea mai bună experiență dulce. 
+      Continuând navigarea, ești de acord cu <a href="politica-cookies.html" class="text-secondary text-decoration-underline">Politica de Cookies</a>.
+    </p>
+    <button id="accept-cookies" class="btn btn-secondary btn-sm ms-md-3">Acceptă</button>
+  </div>
+</div>
+
+<!--COOKIES JS---------------------------------------------------------------------------------------------->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "block";
+    }
+    document.getElementById("accept-cookies").addEventListener("click", function() {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    });
+  });
 </script>
 
 </body>

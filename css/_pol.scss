@@ -1,0 +1,43 @@
+/* _pol.scss */
+.body-politica {
+  background-color: #f8f9fa;
+  padding: 0; // 0 padding lateral pe mobil
+  
+  // Îi dăm spațiu doar pe desktop
+  @media (min-width: 768px) {
+    padding: 50px 0; 
+  }
+
+  .mypol {
+    max-width: 800px;
+    margin: 0 auto;
+    border: none;
+    
+    // Stiluri specifice doar pentru mobil (sub 768px)
+    @media (max-width: 767px) {
+      border-radius: 0; // Cutia se întinde pe tot ecranul
+      box-shadow: none !important; // Eliminăm umbra
+      // Adăugăm spațiu doar sus și jos
+      margin: 20px 0;
+    }
+
+    // Stiluri pentru h1 și paragrafe din interior
+    h1 {
+      font-size: 1.3rem; // h1 mai mic pe mobil
+      margin-bottom: 1.5rem;
+
+      @media (min-width: 768px) {
+        font-size: 1rem; // revine la normal pe desktop
+      }
+    }
+
+    p, li {
+      font-size: 1rem; // puțin mai mic pe mobil
+      line-height: 1.6;
+
+      @media (min-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+  }
+}

@@ -12719,18 +12719,18 @@ html, body {
 .footer {
   /* Use a slightly different shade than your body background 
      to give it a distinct "base" feel */
-  background-color: rgba(107, 61, 59, 0.5);
+  background-color: rgb(160, 157, 157);
   border-top: 1px solid rgba(107, 61, 59, 0.1);
 }
 .footer .footer-link {
   text-decoration: none;
-  color: #ba4a69;
+  color: black;
   font-weight: 500;
   transition: color 0.3s ease;
   font-size: 0.95rem;
 }
 .footer .footer-link:hover {
-  color: #6b3d3b;
+  color: black;
 }
 .footer .bi-heart-fill {
   font-size: 0.8rem;
